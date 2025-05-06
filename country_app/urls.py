@@ -1,10 +1,7 @@
-from django.urls import path, include
-from rest_framework.routers import DefaultRouter
-from .views import CountryViewSet
-
-router = DefaultRouter()
-router.register(r'countries', CountryViewSet, basename='country')
+from django.urls import path
+from .views import CountryList, CountryDetail
 
 urlpatterns = [
-    path('', include(router.urls))
+    path('country/', CountryList.as_view()), 
+    path('country/<int:pk>/', CountryDetail.as_view()), 
 ]
