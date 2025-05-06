@@ -8,7 +8,7 @@ class Country(models.Model):
     წამოიღოთ ქვეყანაზე ისეთი ინფორმაცია, როგორიცაა: GDP, ვალუტა და სხვა.'''
     name = models.CharField(max_length=255)
     capital_city = models.CharField(max_length=255)
-    population = models.IntegerField()
+    population = models.FloatField()
     area = models.FloatField()
     official_languages = models.CharField(max_length=255)
     continent = models.CharField(max_length=255)
